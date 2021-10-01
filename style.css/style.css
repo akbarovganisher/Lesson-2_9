@@ -1,0 +1,106 @@
+@font-face {
+    font-family: l-b;
+    src: url(./../font/Livvic-Bold.ttf);
+}
+
+@font-face {
+    font-family: l-r;
+    src: url(./../font/Livvic-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ccc;
+    height: 100vh;
+    background: url(../img/oboi-dlya-kuxni-81.jpg);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: #fff;
+    width: 950px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px 5px rgb(145, 145, 145);
+}
+
+.box {
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.box .text h1 {
+    position: relative;
+    font-family: 'l-b';
+    left: 25px;
+    margin: 10% 0% 1% 0%;
+    color: rgb(203, 224, 14);
+    font-size: 30px;
+}
+
+.box p {
+    font-family: 'l-r';
+    text-align: center;
+    margin: 0;
+    height: 120px;
+    width: 200px;
+    color: rgb(129, 127, 127);
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 500px;
+        margin: 180px auto;
+    }
+    .box {
+        width: 460px;
+        border-top: 20px solid black;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .container > .box:nth-child(1){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+    .container > .box:nth-child(3){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+    .container > .box:nth-child(4){
+        border-bottom: 10px solid black;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 250px;
+        margin: 550px auto;
+    }
+    .box {
+        width: 210px;
+        border-top: 20px solid black;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .container > .box:nth-child(1){
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .container > .box:nth-child(3){
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .container > .box:nth-child(4){
+        border-bottom: 10px solid black;
+    }
+}
